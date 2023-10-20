@@ -431,3 +431,88 @@ curl -X 'DELETE' \
 http://localhost:5055/apiropa/Prenda/4
 ```
 
+#### INVENTARIO
+
+GET:
+
+```csharp
+[
+  {
+    "id": 1,
+    "codInv": "35460",
+    "valorVtaCop": 2500000,
+    "valorVtaUsd": 550,
+    "idPrendaFk": 1
+  },
+  {
+    "id": 2,
+    "codInv": "546460",
+    "valorVtaCop": 3500000,
+    "valorVtaUsd": 750,
+    "idPrendaFk": 1
+  },
+  {
+    "id": 3,
+    "codInv": "435553",
+    "valorVtaCop": 10000000,
+    "valorVtaUsd": 3350,
+    "idPrendaFk": 1
+  }
+]
+```
+
+POST
+
+Auto-incrementing PK data entry
+
+```csharp
+http://localhost:5055/apiropa/Inventario/2
+{
+  "codInv": "546460",
+  "valorVtaCop": 3500000,
+  "valorVtaUsd": 750,
+  "idPrendaFk": 1
+}
+```
+
+GET {id}
+
+Search for elements by Id
+
+```csharp
+http://localhost:5055/apiropa/Inventario/2
+{
+  "id": 2,
+  "codInv": "546460",
+  "valorVtaCop": 3500000,
+  "valorVtaUsd": 750,
+  "idPrendaFk": 1
+}
+```
+
+PUT
+
+Data update
+
+```csharp
+http://localhost:5055/apiropa/Inventario/2
+
+{
+  "id": 2,
+  "codInv": "546460",
+  "valorVtaCop": 5000000,
+  "valorVtaUsd": 1200,
+  "idPrendaFk": 1
+}
+```
+
+Delete
+
+```csharp
+curl -X 'DELETE' \
+  'http://localhost:5055/apiropa/Inventario/3' \
+  -H 'accept: */*'
+
+http://localhost:5055/apiropa/Inventario/3
+```
+
