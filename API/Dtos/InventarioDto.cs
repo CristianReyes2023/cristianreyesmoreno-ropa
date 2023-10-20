@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace API.Dtos;
-public class InvetarioDto
+public class InventarioDto
 {
     public int Id { get; set; }
     public string CodInv { get; set; }
