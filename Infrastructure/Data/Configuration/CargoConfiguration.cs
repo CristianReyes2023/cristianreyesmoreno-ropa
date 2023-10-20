@@ -17,7 +17,7 @@ public class CargoConfiguration : IEntityTypeConfiguration<Cargo>
         builder.Property(x=>x.Id);
 
         builder.Property(x=>x.Descripcion).IsRequired().HasMaxLength(300);
-        builder.Property(x=>x.SuledoBase).HasColumnType("int");
+        builder.Property(x=>x.SueldoBase).HasColumnType("int");
 
     }
 }
