@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core.Entities
+namespace Core.Entities;
+public class DetalleVenta : BaseEntity
 {
-    public class DetalleVenta
-    {
-        
-    }
+    public int Cantidad { get; set; }
+    public double ValorUnit { get; set; }
+    public int IdVentaFk { get; set; }
+    public Venta Ventas { get; set; }
+    public int IdInventarioFk { get; set; }
+    public Inventario Inventarios { get; set; }
+    public int IdTallaFk { get; set; }
+    public Talla Tallas { get; set; }
 }

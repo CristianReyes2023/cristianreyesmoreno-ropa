@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core.Entities
+namespace Core.Entities;
+public class Talla : BaseEntity
 {
-    public class Talla
-    {
-        
-    }
+    public string Descripcion { get; set; }
+    public ICollection<InventarioTalla> InventarioTallas { get; set; }
+    public ICollection<DetalleVenta> DetalleVentas { get; set; }
 }
