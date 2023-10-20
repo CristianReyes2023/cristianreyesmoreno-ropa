@@ -4,7 +4,7 @@
 
 The following are the endpoints of the Entities included in the TiendaRopa product.
 
-###### PAIS
+### PAIS
 
 GET:
 
@@ -72,7 +72,7 @@ curl -X 'DELETE' \
   -H 'accept: */*'
 ```
 
-###### DEPARTAMENTO
+#### DEPARTAMENTO
 
 GET:
 
@@ -155,7 +155,7 @@ http://localhost:5055/apiropa/Departamento/4
 
 
 
-###### INSUMO
+#### INSUMO
 
 GET:
 
@@ -236,7 +236,7 @@ curl -X 'DELETE' \
  http://localhost:5055/apiropa/Insumo/4
 ```
 
-###### EMPRESA
+#### EMPRESA
 
 GET:
 
@@ -325,5 +325,109 @@ curl -X 'DELETE' \
   -H 'accept: */*'
 
 http://localhost:5055/apiropa/Empresa/4
+```
+
+#### PRENDA
+
+GET:
+
+```csharp
+http://localhost:5055/apiropa/Prenda
+[
+  {
+    "id": 1,
+    "idPrenda": 45,
+    "nombrePrenda": "Blusa con escote",
+    "valorUnitCop": 80000,
+    "valorUnitUsd": 20,
+    "idEstadoFk": 1,
+    "idTipoProteccion": 1,
+    "idGeneroFk": 1
+  },
+  {
+    "id": 3,
+    "idPrenda": 55,
+    "nombrePrenda": "Blusa Azul y sin manga",
+    "valorUnitCop": 90000,
+    "valorUnitUsd": 25,
+    "idEstadoFk": 1,
+    "idTipoProteccion": 1,
+    "idGeneroFk": 1
+  },
+  {
+    "id": 4,
+    "idPrenda": 65,
+    "nombrePrenda": "Saco Azul de lana",
+    "valorUnitCop": 150000,
+    "valorUnitUsd": 45,
+    "idEstadoFk": 1,
+    "idTipoProteccion": 1,
+    "idGeneroFk": 1
+  }
+]
+```
+
+POST
+
+Auto-incrementing PK data entry
+
+```csharp
+http://localhost:5055/apiropa/Prenda/3
+{
+  "id": 3,
+  "idPrenda": 55,
+  "nombrePrenda": "Blusa con mangas",
+  "valorUnitCop": 100000,
+  "valorUnitUsd": 25,
+  "idEstadoFk": 1,
+  "idTipoProteccion": 1,
+  "idGeneroFk": 1
+}
+```
+
+GET {id}
+
+Search for elements by Id
+
+```csharp
+http://localhost:5055/apiropa/Prenda/3
+{
+  "id": 3,
+  "idPrenda": 55,
+  "nombrePrenda": "Blusa con mangas",
+  "valorUnitCop": 100000,
+  "valorUnitUsd": 25,
+  "idEstadoFk": 1,
+  "idTipoProteccion": 1,
+  "idGeneroFk": 1
+}
+```
+
+PUT
+
+Data update
+
+```csharp
+http://localhost:5055/apiropa/Prenda/3
+{
+  "id": 3,
+  "idPrenda": 55,
+  "nombrePrenda": "Blusa Azul y sin manga",
+  "valorUnitCop": 90000,
+  "valorUnitUsd": 25,
+  "idEstadoFk": 1,
+  "idTipoProteccion": 1,
+  "idGeneroFk": 1
+}
+```
+
+Delete
+
+```csharp
+curl -X 'DELETE' \
+  'http://localhost:5055/apiropa/Prenda/4' \
+  -H 'accept: */*'
+
+http://localhost:5055/apiropa/Prenda/4
 ```
 
