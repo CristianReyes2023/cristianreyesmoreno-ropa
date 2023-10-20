@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Core.Entitie;
+using Core.Entities;
 
 namespace Core.Entities;
 public class Cliente : BaseEntity

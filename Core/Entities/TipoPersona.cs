@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Core.Entities;
 
-namespace Core.Entitie;
+namespace Core.Entities;
 public class TipoPersona : BaseEntity
 {
     public string NombreTipoPersona { get; set; }

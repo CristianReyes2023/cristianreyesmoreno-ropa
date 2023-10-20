@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Core.Entities;
 
 namespace Core.Interfaces;
-public interface IVentas : IGenericRepository<Venta> 
+public interface IVenta : IGenericRepository<Venta> 
 {
 
 }
