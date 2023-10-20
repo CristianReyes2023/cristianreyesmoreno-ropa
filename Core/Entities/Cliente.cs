@@ -7,7 +7,7 @@ using Core.Entitie;
 namespace Core.Entities;
 public class Cliente : BaseEntity
 {
-    public string IdCliente { get; set; }
+    public int IdCliente { get; set; }
     public string NombreCliente { get; set; }
     public DateOnly FechaRegistro { get; set; }
     public int IdTipoPersonaFk { get; set; }
@@ -15,4 +15,5 @@ public class Cliente : BaseEntity
     public int IdMunicipioFK { get; set; }
     public Municipio Municipios { get; set; }
     public ICollection<Orden> Ordenes { get; set; }
+    public ICollection<Venta> Ventas { get; set; }
 }   

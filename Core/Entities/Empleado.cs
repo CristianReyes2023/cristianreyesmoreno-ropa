@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Core.Entities;
 public class Empleado : BaseEntity
 {
-    public string IdEmpleado { get; set; }
+    public int IdEmpleado { get; set; }
     public string NombreEmpleado { get; set; }
     public DateOnly FechaIngreso { get; set; }
     public int IdCargoFK { get; set; }
