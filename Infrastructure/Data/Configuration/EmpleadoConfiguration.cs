@@ -17,6 +17,7 @@ public class EmpleadoConfiguration : IEntityTypeConfiguration<Empleado>
         builder.Property(x => x.Id);
 
         builder.Property(x => x.IdEmpleado).HasColumnType("int");
+        builder.HasIndex(x=>x.IdEmpleado).IsUnique();
         builder.Property(x=>x.NombreEmpleado).IsRequired().HasMaxLength(80);
         builder.Property(x => x.FechaIngreso).HasColumnType("date");
         

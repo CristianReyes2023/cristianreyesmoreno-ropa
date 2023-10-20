@@ -11,6 +11,6 @@ public class Estado : BaseEntity
     public TipoEstado TipoEstados { get; set; }
     public ICollection<Prenda> Prendas { get; set; }
     public ICollection<DetalleOrden> DetalleOrdenes { get; set; }
-    public ICollection<Orden> Ordens { get; set; }
+    public ICollection<Orden> Ordenes { get; set; }
     
 }

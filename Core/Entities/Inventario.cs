@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Core.Entities;
 public class Inventario : BaseEntity
 {
-    public string ConInv { get; set; }
+    public string CodInv { get; set; }
     public double ValorVtaCop { get; set; }
     public double ValorVtaUsd { get; set; }
     public int IdPrendaFk { get; set; }

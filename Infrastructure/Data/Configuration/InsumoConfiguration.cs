@@ -17,7 +17,8 @@ public class InsumoConfiguration : IEntityTypeConfiguration<Insumo>
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Id);
 
-        builder.Property(x=>x.NombreInsumo).IsRequired().HasMaxLength(50);        
+        builder.Property(x=>x.NombreInsumo).IsRequired().HasMaxLength(50);
+        builder.HasIndex(x=>x.NombreInsumo).IsUnique();        
         builder.Property(x=>x.ValorUnit).HasColumnType("double");
         builder.Property(x=>x.StockMin).HasColumnType("int");
         builder.Property(x=>x.StockMax).HasColumnType("int");

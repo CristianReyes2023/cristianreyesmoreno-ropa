@@ -17,6 +17,7 @@ public class EmpresaConfiguration : IEntityTypeConfiguration<Empresa>
         builder.Property(x => x.Id);
 
         builder.Property(x=>x.Nit).IsRequired().HasMaxLength(50);
+        builder.HasIndex(x=>x.Nit).IsUnique();
         builder.Property(x=>x.RazonSocial).IsRequired().HasMaxLength(200);
         builder.Property(x=>x.RepresentanteLegal).IsRequired().HasMaxLength(100);
 
